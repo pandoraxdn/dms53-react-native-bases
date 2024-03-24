@@ -8,11 +8,6 @@ node_modules/
 dist/
 web-build/
 
-# Myapp
-src/screens/Usuarios/
-src/hooks/useFormUsuarios.tsx
-src/hooks/UseUsuariosApi.tsx
-
 # Native
 *.orig.*
 *.jks

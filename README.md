@@ -34,3 +34,7 @@
       
 ## Camera/Scanner-QR
 - npx expo install expo-camera
+
+## Files
+- npx expo install expo-file-system
+- npx expo install expo-image-picker

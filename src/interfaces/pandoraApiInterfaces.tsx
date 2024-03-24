@@ -15,3 +15,5 @@ export interface LoginResponse {
     update:   Date | string;
 }
 
+export type RequestLogin = LoginResponse | false;
+
