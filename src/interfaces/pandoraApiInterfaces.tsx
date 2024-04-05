@@ -17,3 +17,35 @@ export interface LoginResponse {
 
 export type RequestLogin = LoginResponse | false;
 
+export interface SensorDataResponse{
+    numberRegisters: number;
+    today: TypeToday;
+    yesterday: TypeYesterday;
+    beforeYesterday: TypeBeforeYesterday;
+}
+
+interface TypeToday{
+    maxToday: number;
+    minToday: number;
+    lastToday: Records[];
+}
+
+interface TypeYesterday{
+    maxYesterday: number;
+    minYesterday: number;
+    lastYesterday: Records[];
+}
+
+interface TypeBeforeYesterday{
+    maxBeforeYesterday: number;
+    minBeforeYesterday: number;
+    lastBeforeYesterday: Records[];
+}
+
+interface Records{
+    _id:            string;
+    fecha:          Date;
+    distancia_cm:   number;
+    distancia_inch: number;
+}
+
