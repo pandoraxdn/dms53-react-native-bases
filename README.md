@@ -41,3 +41,6 @@
 
 ## QR
 - npm i -S react-native-svg react-native-qrcode-svg
+
+## Gŕaficos
+- npm i react-native-chart-kit
