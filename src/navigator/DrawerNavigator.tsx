@@ -11,6 +11,7 @@ import { PokemonNavigator } from './PokemonNavigator';
 import { MaterialBottomNavigator } from './MaterialBottomNavigator';
 import { LoginScreen } from '../screens/Usuarios/LoginScreen';
 import { AuthContext } from '../context/AuthContext';
+import { SensorDataScreen } from '../screens/chars/SensorDataScreen';
 
 export type RootStackParamsDrawer = {
     StackNavigator: undefined;
@@ -20,6 +21,7 @@ export type RootStackParamsDrawer = {
     FormContextScreen: undefined;
     PokemonNavigator: undefined;
     MaterialBottomNavigator: undefined;
+    SensorDataScreen: undefined;
 }
 
 const Drawer = createDrawerNavigator<RootStackParamsDrawer>();
@@ -80,6 +82,11 @@ const Navigator = () => {
                 name="MaterialBottomNavigator"
                 options={{ title:"Página Inicial" }}
                 component={ MaterialBottomNavigator }
+            />
+            <Drawer.Screen
+                name="SensorDataScreen"
+                options={{ title:"Dashboard" }}
+                component={ SensorDataScreen }
             />
         </Drawer.Navigator>
     );

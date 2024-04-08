@@ -10,7 +10,7 @@ export const useTareaApi = () => {
 
     const [ listTareas, setListTareas ] = useState<TareasResponse>({} as TareasResponse);
 
-    const apiUrl: string = 'http://192.168.100.100:3000/api/v1/tareas';
+    const apiUrl: string = 'http://192.168.100.20:3000/api/v1/tareas';
 
     const loadTareas = async () => {
 

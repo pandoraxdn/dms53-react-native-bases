@@ -20,7 +20,8 @@ export const MenuInterno = ( {navigation}:DrawerContentComponentProps ) => {
                     source={
                         ( !authState.isLoggenIn || authState.favoriteImage == undefined )
                         ? require( assets + 'I.png' ) 
-                        : { uri: authState.favoriteImage }
+                        //: { uri: authState.favoriteImage }
+                        : { uri: `data:image/jpeg;base64,${authState.favoriteImage}` }
                     }
                 />
                 <Text
@@ -102,6 +103,16 @@ export const MenuInterno = ( {navigation}:DrawerContentComponentProps ) => {
                         style={ appTheme.menuText }
                     >
                         Tabs
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={ appTheme.menuBtn }
+                    onPress={ () => navigation.navigate("SensorDataScreen") }
+                >
+                    <Text
+                        style={ appTheme.menuText }
+                    >
+                        Dashboard
                     </Text>
                 </TouchableOpacity>
             </View>
